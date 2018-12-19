@@ -1,5 +1,5 @@
 ;; Colt Kirkpatrick
-;;Tue Dec 18 22:38:48 CST 2018
+;; Tue Dec 18 22:38:48 CST 2018
 ;;
 ;; ~/.emacs
 ;;
