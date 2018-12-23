@@ -19,14 +19,14 @@
  '(custom-enabled-themes (quote (doom-challenger-deep)))
  '(custom-safe-themes
    (quote
-    ("a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "d2e9c7e31e574bf38f4b0fb927aaff20c1e5f92f72001102758005e53d77b8c9" default)))
+    ("6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "d2e9c7e31e574bf38f4b0fb927aaff20c1e5f92f72001102758005e53d77b8c9" default)))
  '(fci-rule-color "#56697A")
  '(jdee-db-active-breakpoint-face-colors (cons "#10151C" "#5EC4FF"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#10151C" "#8BD49C"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#10151C" "#384551"))
  '(package-selected-packages
    (quote
-    (lua-mode flymake-lua doom-themes undohist dash all-the-icons)))
+    (ledger-mode lua-mode flymake-lua doom-themes undohist dash all-the-icons)))
  '(recentf-mode t)
  '(vc-annotate-background "#1D252C")
  '(vc-annotate-color-map
@@ -63,7 +63,7 @@
 (require 'package) (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
 ;; Setting options
-(set-default-font "Noto Sans Mono 9")
+(set-default-font "terminus 14")
 (setq inhibit-splash-screen t)
 (setq ido-enable-flex-matching t) (setq ido-everywhere t) (ido-mode 1)
 (setq column-number-mode t)
@@ -90,5 +90,22 @@
 (global-set-key "\M- " 'hippie-expand)
 (global-set-key (kbd "C-x C-b") 'ibuffer) (autoload 'ibuffer "ibuffer" "List buffers." t)
 (global-set-key "\M-z" 'zap-up-to-char)
+(global-set-key (kbd "<f8>") 'save-buffer)
 
-;; end
+;; Custom
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
+
+
+;"##################\",
+;"######..##..######\",
+;"#####........#####\",
+;"#.##.##..##...####\",
+;"#...####.###...##.\",
+;"#..###.######.....\",
+;"#####.########...#\",
+;"###########.######\",                                 
+;"####.###.#..######\",
+;"######..###.######\",
+;"###....####.######\",
+;"###..######.######\",
+;"###########.######\"                                                                 
