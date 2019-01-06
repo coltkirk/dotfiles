@@ -1,0 +1,39 @@
+* DONE: Add user to sudo
+** edited /sbin/visudo with username ALL=(ALL) ALL 
+* TODO: Restic with auto backups
+** #debian log
+<SerajewelKS> coltkirk: #1 rule is make a full system backup before doing
+              upgrades you're worried about
+<coltkirk> using git right
+<SerajewelKS> coltkirk: git is not a backup tool.  i use restic, there's also
+              things like duplicity and borg.  [12:12]
+<SerajewelKS> (if you use restic, the version in debian is so out of date that
+              it's useless, use the release binary on github instead)
+<nkuttler> eh, rule 1# of backups is to automate them and make them
+           continuously ;)
+<SerajewelKS> that too
+<Hund> Rule #2 should probably be to test your backups. :)
+<nkuttler> pretty much  [12:13]
+<Hund> The only thing that's worse than no backups is backups that doesn't
+       work.
+<coltkirk> ok. thank you. i save those type of rules into a todo.org file for
+           me to go through, and 'learn by doing'
+<coltkirk> my life is one lon todo list
+<coltkirk> *long
+<nkuttler> the more you learn, the longer it gets
+<Hund> There's also that 3-2-1 rule as well.
+<Hund> 3 copies, 2 types of medias and 1 offsite copy. If I recall it
+       correctly.  [12:16]
+<coltkirk> duly noted
+<SerajewelKS> with restic i keep one copy on-site and two off-site copies
+              instead  [12:17]
+<SerajewelKS> seems a bit safer to me
+<Hund> They're talking about servers though. You don't store the backups on
+       the server. So we're really talking about 3 computers and one of them
+       is offsite.  [12:20]
+<SerajewelKS> right.  we use one on-site dedicated backup server and two
+              off-site replicas.  [12:21]
+<Hund> Okey. :)
+
+* DONE: Install i3
+** $ sudo apt-get install i3 suckless-tools
