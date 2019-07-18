@@ -18,7 +18,7 @@ autoload -Uz promptinit
 promptinit
 
 export PS1=$'%F{green}[%~]$ '
-export RPS1=$'%F{yellowaaaaaaaaaaaaa}:)'
+export RPS1=$'%F{yellow}:)'
 
 export ssd=/run/media/sysop/14AE9EA17FC17EFA/
 export ZDOTDIR=/home/sysop/.zshrc
