@@ -3,10 +3,6 @@
 ;;
 ;; ~/.emacs
 ;;
-;; TODO:
-;; Icicles: https://www.emacswiki.org/emacs/Icicles
-;; Flyspell: https://www.emacswiki.org/emacs/FlySpell#toc5
-;; Keyboard hyper/Caps
 ;;
 (package-initialize)
 (custom-set-variables
@@ -93,35 +89,10 @@
 (global-set-key (kbd "<f5>") 'ibuffer) (autoload 'ibuffer "ibuffer" "List buffers." t)
 (global-set-key "\M-z" 'zap-up-to-char)
 (global-set-key (kbd "<f8>") 'save-buffer)
+(global-set-key (kbd "<f9>") 'comment-or-uncomment-region)
 
 ;; Custom
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))
-
-;; Slime
-;;;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
-;; Replace "sbcl" with the path to your implementation
-;;;; (setq inferior-lisp-program "/usr/bin/sbcl")
-
-;; pdf-tools
-;; if one day you have some weird bug, the
-;; trick it's to delete pdf-tools from elpa and install the package
-;; again. Don't ask why, I fucking don't know hahaha
-;; (pdf-tools-install)
-;; (pdf-tools-install :no-query)
-;; (setq pdf-view-use-unicode-lighter nil)
-;; (use-package pdf-tools
-;;  :defer 1
-;;  :magic ("%PDF" . pdf-view-mode)
-;;  :init (pdf-tools-install :no-query))
-;; Ledger mode
-;; clear whole transactions has to do with the *
-;; mode dictates which format the ledger files open
-;(use-package ledger-mode
-;  :ensure t
-;  :init
-;  (setq ledger-clear-whole-transactions 1)
-;  :mode "\\.dat\\'")
-
 
 ; my-erc  setup. For  Alt-x my-erc <return> 
 ;
@@ -172,7 +143,6 @@
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#org-mode" "#lisp" "#clschool" "#ubuntu")))
 ;(setq erc-autojoin-channels-alist '(("freenode.net" "#lisp" "#clschool" "#org-mode" )))
 ;
-;; ---- end of .emacs section --------------------------------------------------
 ;; ---- end of .emacs section --------------------------------------------------
 ;
 
