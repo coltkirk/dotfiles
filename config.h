@@ -84,42 +84,44 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 normal colors */
+  [0] = "#080808", /* black   */
+  [1] = "#ff8373", /* red     */
+  [2] = "#00c172", /* green   */
+  [3] = "#d2a700", /* yellow  */
+  [4] = "#0071cf", /* blue    */
+  [5] = "#ff90fe", /* magenta */
+  [6] = "#6bffdd", /* cyan    */
+  [7] = "#f1f1f1", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#2e2e2e", /* black   */
+  [9]  = "#ffc4be", /* red     */
+  [10] = "#d6fcba", /* green   */
+  [11] = "#fffed5", /* yellow  */
+  [12] = "#c2e3ff", /* blue    */
+  [13] = "#ffb2fe", /* magenta */
+  [14] = "#e6e7fe", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+  /* special colors */
+  [256] = "#151144", /* background */
+  [257] = "#00ff92", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
 
 /*
  * Default shape of cursor
@@ -140,7 +142,7 @@ static unsigned int rows = 24;
 /*
  * Default colour and shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_xterm;
+static unsigned int mouseshape = XC_left_ptr;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
@@ -457,3 +459,5 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
+
