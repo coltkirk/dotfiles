@@ -94,9 +94,9 @@ alias l='ls -CF'
 alias ..="cd .."
 alias sag="sudo apt-get install"
 alias sts="sudo tlp start"
-alias aseprite="/home/coltkirk/aseprite/build/bin/aseprite"
-alias godot="/home/coltkirk/godot/Godot_v3.1.1-stable_x11.64"
+alias aseprite="/home/colt/aseprite/build/bin/aseprite"
 alias volume="pavucontrol"
+alias pico8="/home/colt/pico-8/pico8"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -122,6 +122,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
 
 #  _______________
 # |@@@@|     |####|
