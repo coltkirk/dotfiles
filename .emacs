@@ -84,7 +84,6 @@
 
 ;;________________________________________________________________________________________
 ;;;; Inital Code Load
-(require 'cl)
 (require 'font-lock)
 (require 'dired-x)
 (require 'recentf)
