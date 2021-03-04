@@ -37,8 +37,6 @@ time.timeZone = "America/Chicago";
   networking.interfaces.enp0s31f6.useDHCP = true;
   networking.interfaces.wlp4s0.useDHCP = true;
 
-programs.nm-applet.enable = true;
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
